@@ -22,21 +22,21 @@ pipeline {
 //                junit 'res.xml'
 //            }
 //        }
-//
-//        stage("Reset containers"){
-//            steps{
-//                script {
-//                    try {
-//                        sh "docker compose -f docker-compose.yml --env-file config/test.env down"
-//                    }
-//                    finally {}
-//                }
-//            }
-//        }
-//        stage("Deploy containers") {
-//            steps {
-//                sh "docker compose -f docker-compose.yml --env-file config/test.env up -d"
-//            }
-//        }
+
+        stage("Reset containers"){
+            steps{
+                script {
+                    try {
+                        sh "docker compose -f docker-compose.yml --env-file config/dev.env down"
+                    }
+                    finally {}
+                }
+            }
+        }
+        stage("Deploy containers") {
+            steps {
+                sh "docker compose -f docker-compose.yml --env-file config/dev.env up -d"
+            }
+        }
     }
 }
