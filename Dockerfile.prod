@@ -1,4 +1,4 @@
-FROM node:14.9.0 AS build-step
+FROM node:latest AS build-step
 
 RUN npm install -g @angular/cli
 
