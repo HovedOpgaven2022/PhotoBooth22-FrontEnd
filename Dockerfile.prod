@@ -1,5 +1,7 @@
 FROM node:14.9.0 AS build-step
 
+RUN npm install -g @angular/cli
+
 WORKDIR /build
 COPY package.json package-lock.json ./
 RUN npm install
