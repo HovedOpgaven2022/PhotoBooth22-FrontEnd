@@ -11,10 +11,11 @@ export class ApiService {
 
     constructor(private http: HttpClient) { }
 
-    login(): User {
+    login(username: string): User {
 
         //Get salt from username
-        //Hasg the password using the salt
+        let salt = this.http.post((environment.appUrl + "/api/User/GetSalt/"), username);
+        //Hash the password using the salt
         //Send the hashed password with username to server
         //Get response
 
