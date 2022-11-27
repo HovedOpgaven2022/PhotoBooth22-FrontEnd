@@ -25,10 +25,16 @@ export class ApiService {
             return { username: "", id: "", name: "", phoneNumber: "" }
         }
 
-        let _url = `${environment.appUrl}/api/User/GetSalt/${username}`
+        this.http.get<string>(`${environment.appUrl}/api/User/GetSalt/${username}`, requestOptions).subscribe(async salt => {
+            let hashedPassword = await this.sec.hashPassword(password, salt); 
+            let data = {
+                AccountName: username,
+                Password: hashedPassword
+            }
 
-        this.http.get<string>(_url, requestOptions).subscribe(res => console.log(res))
-
+            console.log(data)
+            this.http.post<any>(`${environment.appUrl}/api/User/Login`, JSON.stringify(data), requestOptions).subscribe(res => console.log(res))
+        })
         return { id: "", name: "", phoneNumber: "", username: "" }
     }
 }
