@@ -54,14 +54,14 @@ export class ApiService {
         let hashedPassword = await this.sec.hashPassword(password, generatedSalt);
 
         let data: RegisterUser = {
-            username: username,
-            name: name,
-            password: hashedPassword,
-            phone: phone,
-            salt: generatedSalt
+            AccountName: username,
+            Name: name,
+            Password: hashedPassword,
+            Phone: phone,
+            Salt: generatedSalt
         }
 
-        this.http.post(`${environment.appUrl}/api/User/Register`, JSON.stringify(data), requestOptions).subscribe(result => {
+        this.http.post(`${environment.appUrl}/api/User/CreateUser`, JSON.stringify(data), requestOptions).subscribe(result => {
             console.log(result);
         })
     }

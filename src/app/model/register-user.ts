@@ -1,7 +1,7 @@
 export interface RegisterUser {
-    username: string,
-    name: string
-    password: string,
-    phone: string,
-    salt: string
+    AccountName: string,
+    Name: string
+    Password: string,
+    Phone: string,
+    Salt: string
 }
