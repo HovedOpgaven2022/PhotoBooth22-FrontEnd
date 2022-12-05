@@ -4,8 +4,6 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { SignupComponent } from './user/signup/signup.component';
-import { UserModule } from './user/user.module';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 
@@ -16,7 +14,6 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    UserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
