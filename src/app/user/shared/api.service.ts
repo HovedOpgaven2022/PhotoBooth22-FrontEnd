@@ -34,7 +34,7 @@ export class ApiService {
             }
 
             console.log(data)
-            this.http.post<any>(`${environment.appUrl}/api/User/Login`, JSON.stringify(data), requestOptions).subscribe(res => console.log(res))
+            this.http.post<any>(`${environment.appUrl}/api/User/Login`, data, requestOptions).subscribe(res => console.log(res))
         })
         return { id: "", name: "", phoneNumber: "", username: "" }
     }
