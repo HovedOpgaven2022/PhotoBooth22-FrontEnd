@@ -1,12 +1,13 @@
 .footer {
     position: absolute;
     width: 100vw;
-    height: 64px;
+    height: 8vh;
     background-color: #cf2e2e;
     bottom: 0;
 
     .logo {
         margin-top: 5px;
         margin-left: 5px;
+        height: 7vh;
     }
 }
