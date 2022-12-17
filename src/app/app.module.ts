@@ -11,6 +11,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { FaqComponent } from './faq/faq.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ContactComponent } from './contact/contact.component';
     FaqComponent,
     AboutComponent,
     ContactComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,

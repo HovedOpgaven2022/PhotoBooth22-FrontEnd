@@ -4,11 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import {FaqComponent} from "./faq/faq.component";
 import {CarouselComponent} from "./carousel/carousel.component";
 import {AboutComponent} from "./about/about.component";
+import {ContactComponent} from "./contact/contact.component";
 const routes: Routes = [
   {path:'', component:CarouselComponent},
   {path:'home', component:CarouselComponent},
   {path:'about', component:AboutComponent},
-  {path:'faq', component:FaqComponent}
+  {path:'faq', component:FaqComponent},
+  {path:'contact', component:ContactComponent}
 ]
 
 @NgModule({
