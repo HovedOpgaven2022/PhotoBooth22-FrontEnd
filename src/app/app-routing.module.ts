@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'faq', component:FaqComponent},
   {path:'contact', component:ContactComponent},
   {path: '404', component: NotfoundComponent},
-  {path: '**', redirectTo: '/404'}
+  {path: '**', redirectTo: '404'}
 ]
 
 @NgModule({
